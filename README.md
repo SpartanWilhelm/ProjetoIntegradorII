@@ -6,8 +6,10 @@ Dicas para execução e teste.
 cd caminho/para/seu/projeto
 
 2 - Crie e ative um ambiente virtual:
-python -m venv venv
-venv\Scripts\activate  # Para Windows
+python -m venv venv //Já cricdo com o nome de venv
+-> venv\Scripts\activate  # Para ativar no Windows
+-> deactivate # Para desativar o venv
+
 
 #Em caso de problemas para rodar o venv 
 Abra o PowerShell como Administrador:
