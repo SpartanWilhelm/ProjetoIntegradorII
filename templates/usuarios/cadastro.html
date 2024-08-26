@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Space</title>
+    <title>Galeria Mundi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,11 +21,7 @@
     <div class="pagina-inicial">
         <header class="cabecalho">
             <img src="{% static '/assets/logo/Logo(2).png' %}" alt="Logo da Alura Space" />
-            {% for message in messages %}
-            <div class="alert alert-primary">
-                <p id="messages">{{ message }}</p>
-            </div>
-            {% endfor %}
+            {% include 'partials/_alertas.html' %}
             <div class="cabecalho__busca">
                 <div class="busca__fundo">
                     <form action="{% url 'buscar' %}">
@@ -55,6 +51,11 @@
                             <label for="{{ field.id_for_label }}" style="color:#D9D9D9; margin-bottom: 5px;">{{field.label}}</label>
                             {{ field }}
                         </div>
+                        {% for error in field.errors %}
+                        <div class="alert alert-danger">
+                            {{error}}
+                        </div>
+                        {% endfor %}
                         {% endfor %}
                     </div>
                     <div>
@@ -66,4 +67,4 @@
     </div>
 </body>
 
-{% include 'galeria/partials/_footer.html' %}
+{% include 'partials/_footer.html' %}
