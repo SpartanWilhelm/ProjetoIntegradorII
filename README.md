@@ -1,6 +1,15 @@
 # ProjetoIntegradorII
 Tema: Desenvolver um software com framework web que utilize banco de dados, inclua script web (Javascript), nuvem, uso de API, acessibilidade, controle de versão e testes. Opcionalmente, incluir análise de dados.
 
+Framework -> Django (Python)
+Banco de dados -> SQLite
+Script Web -> Javascript
+Nuvem -> AWS (Futuro)
+API -> Em andamento
+Controle de versão -> Git e GitHub
+Testes -> Em andamento
+
+
 Dicas para execução e teste.
 1- Navegue até o diretório do projeto:
 cd caminho/para/seu/projeto
