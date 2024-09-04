@@ -33,7 +33,8 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    /*background: linear-gradient(#041833,#04244F,#154580);*/
+    background: linear-gradient(#f8e8d1, #f3d5b5, #e7c6a9, #d5b9b2, #a5a58d);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -61,17 +62,21 @@ table {
 }
 
 .banner__imagem {
-    width: 100%;
+    width: 1156px;
+    height: 328px;
+    border-radius: 15px;
+    border: 2px solid #8d4925;
 }
 
 .banner__titulo {
-    color: #FFFFFF;
+    color: #e7c6a9;
     font-size: 40px;
     width: 350px;
     line-height: 50px;
     position: absolute;
-    top: 80px;
-    left: 80px;
+    top: 20px;
+    left: 200px;
+    -webkit-text-stroke: 1px #8d4925; /* Borda branca fina */
 }
 
 .cabecalho {
@@ -84,7 +89,7 @@ table {
 .cabecalho__busca {
     align-items: center;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #d5b9b2, #a5a58d);
     display: flex;
     height: auto;
     justify-content: space-between;
@@ -94,7 +99,7 @@ table {
 
 .busca__fundo {
     align-items: center;
-    background-color: #041A37;
+    background-color: #8d4925;
     border-radius: 8px;
     display: flex;
     margin: 0 auto;
@@ -106,10 +111,15 @@ table {
     background-color: transparent;
     border: none;
     font-size: 1rem;
-    height: 24px;
+    height: 40px;
     padding: 10px;
     width: 500px;
+    color: #8d4925;
 }
+.busca__input::placeholder {
+    color: #d5b9b2; /* Cor do placeholder */
+  }
+  
 
 .busca__icone {
     cursor: pointer;
@@ -122,7 +132,7 @@ table {
 }
 
 .cards__titulo {
-    color: #7B78E5;
+    color: #8d4925;
     font-size: 2rem;
     line-height: 3rem;
     margin-bottom: 1.5rem;
@@ -261,13 +271,13 @@ table {
     display: flex;
     margin-bottom: 1.5rem;
     text-decoration: none;
-    color: #D9D9D9;
+    color: #D2691E;
     font-size: 24px;
 }
 
 .menu-lateral__navegacao a:first-child {
     font-weight: bold;
-    color: #7B78E5;
+    color: #8d4925;
 }
 
 .menu-lateral__navegacao img {
@@ -286,7 +296,7 @@ table {
 
 .populares__titulo {
     font-size: 2rem;
-    color: #7B78E5;
+    color: #8B4513;
     line-height: 3rem;
     margin-bottom: 1.5rem;
 }
@@ -304,7 +314,7 @@ table {
     width: 100%;
     height: 50px;
     border-radius: 10px;
-    background: linear-gradient(45deg, #C98CF1,#7B78E5);
+    background: linear-gradient(45deg, #8B4513,#4B2E2E);
     padding: 2px;
     box-sizing: border-box;
 }
@@ -316,7 +326,7 @@ table {
     font-size: 20px;
     text-decoration: none;
     color: #FFFFFF;
-    background-color: #082D5C;
+    background-color: #7B3F00;
     width: 100%;
     height: 100%;
     border-radius: 8px;
@@ -333,7 +343,7 @@ table {
 }
 
 .rodape {
-    background-color: #04244F;
+    background-color: #8d4925;
     width: 100%;
     padding: 1.5rem 3rem;
     box-sizing: border-box;
@@ -356,7 +366,7 @@ table {
     padding: 1.5rem 0;
     display: flex;
     align-items: center;
-    color: #D9D9D9;
+    color: #7B3F00;
     font-size: 1.3rem;
 }
 
@@ -379,7 +389,7 @@ table {
 }
 
 .tags__tag:hover {
-    border: 2px solid #7B78E5;
+    border: 2px solid #D2691E;
     cursor: pointer;
 }
 
