@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+            <h2 class="cards__titulo">Resultados do Artsy</h2>
+                <section class="galeria">  
+                    
+                    <ul class="cards__lista">
+                    <div id="results">                        
+                        {% for artist in artists %}
+                            <div class="artist">
+                                <img src="{{ artist.thumbnail }}" alt="{{ artist.title }}">
+                                <div>
+                                    <h2><a href="{{ artist.permalink }}">{{ artist.title }}</a></h2>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </ul>
+                    </div>                    
+                </section>
+            </section>
+        </main>
+    </div>
+    
+{% endblock %}
