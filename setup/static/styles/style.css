@@ -62,7 +62,7 @@ table {
 }
 
 .banner__imagem {
-    width: 1000px;
+    width: 1024px;
     height: 328px;
     border-radius: 15px;
     border: 2px solid #8d4925;
@@ -411,12 +411,24 @@ table {
     border-radius: var(--bs-alert-border-radius);
 }
 
+
 .alert-primary {
     --bs-alert-color: #084298;
     --bs-alert-bg: #cfe2ff;
     --bs-alert-border-color: #b6d4fe;
 }
 
+.alert-success {
+    --bs-alert-color: #0f5132;
+    --bs-alert-bg: #d1e7dd;
+    --bs-alert-border-color: #badbcc;
+}
+
+.alert-danger {
+    --bs-alert-color: #842029;
+    --bs-alert-bg: #f8d7da;
+    --bs-alert-border-color: #f5c2c7;
+}
 
 .row {
     --bs-gutter-x: 1.5rem;
