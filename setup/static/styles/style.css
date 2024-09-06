@@ -114,7 +114,7 @@ table {
     height: 40px;
     padding: 10px;
     width: 500px;
-    color: #ffffff;
+    color: #d5b9b2;
 }
 .busca__input::placeholder {
     color: #d5b9b2; /* Cor do placeholder */
