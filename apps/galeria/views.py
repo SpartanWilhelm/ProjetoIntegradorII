@@ -115,32 +115,3 @@ def get_artwork(token, artwork_id):
     print(response.json())  # Verifique a resposta
     return response.json()
 
-
-# Visão para exibir a obra de arte
-def artwork_view(request, artwork_id):
-    token = get_access_token()
-    artwork = get_artwork(token, artwork_id)
-    return JsonResponse(artwork)
-
-# Usar o token de acesso para fazer uma solicitação
-def search_artists(token, query):
-    url = f'https://api.artsy.net/api/search?q={query}&type=artist'
-    headers = {
-        'X-Xapp-Token': token
-    }
-    response = requests.get(url, headers=headers)
-    return response.json()
-
-# Visão para buscar artistas e renderizar o template
-def artist_search_view(request):
-    query = request.GET.get('query', '')
-    token = get_access_token()
-    artists_data = search_artists(token, query)
-    artists = []
-    for artist in artists_data.get('_embedded', {}).get('results', []):
-        artists.append({
-            'title': artist.get('title'),
-            'permalink': artist.get('_links', {}).get('permalink', {}).get('href'),
-            'thumbnail': artist.get('_links', {}).get('thumbnail', {}).get('href')
-        })
-    return render(request, 'galeria/artist.html', {'artists': artists})

@@ -171,6 +171,11 @@ table {
     text-align: center;
     top: 20px;
     width: 100px;
+    text-shadow: 
+        -1px -1px 0 #ffffff,  
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
 }
 
 .card__info {
@@ -184,6 +189,7 @@ table {
     line-height: 1.2rem;
     margin-top: 0.8em;
 }
+
 
 .card__texto {
     color: #8d4925;
