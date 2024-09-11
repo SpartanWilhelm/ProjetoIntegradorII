@@ -75,7 +75,7 @@ table {
     line-height: 50px;
     position: absolute;
     top: 20px;
-    left: 200px;
+    left: 30px;
     -webkit-text-stroke: 1px #8d4925; /* Borda branca fina */
 }
 
@@ -104,6 +104,9 @@ table {
     display: flex;
     margin: 0 auto;
     width: 100%;
+}
+.busca__fundo button {
+    margin-top: 0rem;
 }
 
 .busca__input {
@@ -211,6 +214,12 @@ table {
     display: flex;
     width: 100%;
 }
+
+.icone {
+    width: 32px;
+    height: 32px;
+}
+
 
 .imagem {
     display: flex;

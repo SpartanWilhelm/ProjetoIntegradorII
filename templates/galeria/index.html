@@ -4,7 +4,7 @@
 
 <section class="conteudo">
     <section class="banner">
-        <img class="banner__imagem" src="{% static '/assets/imagens/Banner.png' %}" alt="banner Galeria Mundi">
+        <img class="banner__imagem" src="{% static '/assets/imagens/BannerNovo.png' %}" alt="banner Galeria Mundi">
         <h1 class="banner__titulo"> Sua Janela para o Mundo da Arte</h1>
     </section>
     <section class="tags">
@@ -30,7 +30,7 @@
                             <img class="card__imagem" src="{{ fotografia.foto.url }}" alt="foto">
                         {% endif %}
                     </a>
-                    <span class="card__tag">Fotografia</span>
+                    <span class="card__tag">Galeria Mundi</span>
                     <div class="card__info">
                         <p class="card__titulo">{{ fotografia.nome }}</p>
                         <div class="card__texto">
@@ -44,7 +44,7 @@
                 {% endfor %}
                 {% else %}
                 <div class="imagem__texto">
-                    <p>Obras não encontradas</p>
+                    <p>Obras não encontradas em nossa galeria</p>
                 </div>                                                 
                 {% endif %}
             </ul>
@@ -61,7 +61,7 @@
                     <a href="{{ artist.permalink }}">
                         <img class="card__imagem" src="{{ artist.thumbnail }}" alt="{{ artist.title }}">
                     </a>
-                    <span class="card__tag">Artista</span> <!-- Adicionado para consistência -->
+                    <span class="card__tag">Artsy</span> <!-- Adicionado para consistência -->
                     <div class="card__info">
                         <p class="card__titulo">{{ artist.title }}</p>
                         <div class="card__texto">
