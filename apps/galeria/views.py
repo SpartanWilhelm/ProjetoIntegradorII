@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from apps.galeria.models import Fotografia
 from django.contrib import messages
 from apps.galeria.forms import FotografiaForms
-import requests
+import requests, logging
 from django.http import JsonResponse
 
 
@@ -48,7 +48,8 @@ def buscar(request):
                 artists.append({
                     'title': artist.get('title'),
                     'permalink': artist.get('_links', {}).get('permalink', {}).get('href'),
-                    'thumbnail': artist.get('_links', {}).get('thumbnail', {}).get('href')
+                    'thumbnail': artist.get('_links', {}).get('thumbnail', {}).get('href'),
+                    'biography': artist.get('biography','Bibliografia não disponível'),
                 })
     
     return render(request, "galeria/index.html", {"cards": fotografias, "artists": artists})
@@ -114,4 +115,5 @@ def get_artwork(token, artwork_id):
     print(headers)  # Verifique os cabeçalhos
     print(response.json())  # Verifique a resposta
     return response.json()
+
 

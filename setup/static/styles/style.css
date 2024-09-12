@@ -97,6 +97,11 @@ table {
     width: auto; 
 }
 
+.cabecalho__logo{
+    width: 318px;
+    height: 99px;
+}
+
 .busca__fundo {
     align-items: center;
     background-color: #8d4925;
