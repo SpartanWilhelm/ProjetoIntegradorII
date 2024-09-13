@@ -20,7 +20,7 @@ def imagem(request, foto_id):
 
 # Usar o token de acesso para fazer uma solicitação
 def search_artists(token, query):
-    url = f'https://api.artsy.net/api/search?q={query}&type=artist'
+    url = f'https://api.artsy.net/api/search?q={query}'
     headers = {
         'X-Xapp-Token': token
     }
@@ -49,7 +49,7 @@ def buscar(request):
                     'title': artist.get('title'),
                     'permalink': artist.get('_links', {}).get('permalink', {}).get('href'),
                     'thumbnail': artist.get('_links', {}).get('thumbnail', {}).get('href'),
-                    'biography': artist.get('biography','Bibliografia não disponível'),
+                    'type': artist.get('type','Descrição não disponível'),
                 })
     
     return render(request, "galeria/index.html", {"cards": fotografias, "artists": artists})
