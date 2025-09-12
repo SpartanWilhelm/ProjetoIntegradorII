@@ -96,7 +96,7 @@ Pull requests são bem-vindos! Para contribuir:
 
 ## Contato
 - Autor: SpartanWilhelm
-- Email: [seu-email@exemplo.com]
+- Email: [clguilherme3@gmail.com]
 
 ---
-Projeto acadêmico - Integrador II
+Projeto Integrador II
